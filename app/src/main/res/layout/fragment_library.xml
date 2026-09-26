@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Decorative Physics Bubbles (Background Layer) -->
+    <View android:id="@+id/decorCircle1" android:layout_width="85dp" android:layout_height="85dp" android:alpha="0.12" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle2" android:layout_width="95dp" android:layout_height="95dp" android:alpha="0.15" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle3" android:layout_width="75dp" android:layout_height="75dp" android:alpha="0.1" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle4" android:layout_width="110dp" android:layout_height="110dp" android:alpha="0.08" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle5" android:layout_width="65dp" android:layout_height="65dp" android:alpha="0.14" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle6" android:layout_width="100dp" android:layout_height="100dp" android:alpha="0.11" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle7" android:layout_width="80dp" android:layout_height="80dp" android:alpha="0.13" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle8" android:layout_width="80dp" android:layout_height="80dp" android:alpha="0.15" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle9" android:layout_width="110dp" android:layout_height="110dp" android:alpha="0.08" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle10" android:layout_width="65dp" android:layout_height="65dp" android:alpha="0.12" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+    <View android:id="@+id/decorCircle11" android:layout_width="100dp" android:layout_height="100dp" android:alpha="0.09" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" android:elevation="0dp" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
+
+            <!-- High-Aesthetic Header: Edge-to-Edge alignment -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/iv_profile_small"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/user"
+                            app:shapeAppearanceOverlay="@style/CircleShapeAppearance"
+                            android:padding="2dp"
+                            app:strokeColor="#FFFFFF"
+                            app:strokeWidth="2dp"
+                            android:elevation="6dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_title_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="18dp"
+                            android:layout_toEndOf="@id/iv_profile_small"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_library_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Your Library"
+                                android:textColor="#FFFFFF"
+                                android:textSize="26sp"
+                                android:fontFamily="sans-serif-black"
+                                android:letterSpacing="-0.02" />
+
+                            <TextView
+                                android:id="@+id/tv_user_name_lib"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Personal Collection"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#CCFFFFFF"
+                                android:textSize="13sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:alpha="0.85" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_search_lib"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/bg_button_circle_glass"
+                                android:contentDescription="Search Collection"
+                                android:src="@drawable/ic_search"
+                                android:padding="9dp"
+                                android:scaleType="fitCenter"
+                                app:tint="#FFFFFF" />
+
+                            <ImageButton
+                                android:id="@+id/btn_add_lib"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="14dp"
+                                android:background="@drawable/bg_button_circle_glass"
+                                android:src="@drawable/ic_add"
+                                android:padding="9dp"
+                                android:scaleType="fitCenter"
+                                android:contentDescription="Add to Library"
+                                app:tint="#FFFFFF" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Professional Search Bar (Intelligently Hidden) -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/search_bar_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="10dp"
+                        android:backgroundTint="@android:color/transparent"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#50FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@drawable/glass_card"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="18dp">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_search"
+                                app:tint="#FFFFFF" />
+
+                            <EditText
+                                android:id="@+id/et_search_lib"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:hint="Find in collection..."
+                                android:inputType="text"
+                                android:paddingHorizontal="14dp"
+                                android:textColor="#FFFFFF"
+                                android:textColorHint="#90FFFFFF"
+                                android:textSize="15sp"
+                                android:importantForAutofill="no" />
+
+                            <ImageButton
+                                android:id="@+id/btn_close_search"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                                app:tint="#FFFFFF" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Modern Filter Pills -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dp">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_songs"
+                                style="@style/Widget.MaterialComponents.Chip.Action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Liked Songs"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="#35FFFFFF"
+                                app:chipStrokeWidth="1dp"
+                                app:chipStrokeColor="#40FFFFFF"
+                                app:chipCornerRadius="20dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_playlists"
+                                style="@style/Widget.MaterialComponents.Chip.Action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Playlists"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="#35FFFFFF"
+                                app:chipStrokeWidth="1dp"
+                                app:chipStrokeColor="#40FFFFFF"
+                                app:chipCornerRadius="20dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_albums"
+                                style="@style/Widget.MaterialComponents.Chip.Action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Albums"
+                                android:textColor="#FFFFFF"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="#35FFFFFF"
+                                app:chipStrokeWidth="1dp"
+                                app:chipStrokeColor="#40FFFFFF"
+                                app:chipCornerRadius="20dp" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- Content Header: Sort & Gallery Toggle -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="14dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_sort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingVertical="8dp"
+                        android:paddingHorizontal="14dp"
+                        android:background="@drawable/bg_button_pill_glass">
+
+                        <ImageView
+                            android:id="@+id/iv_sort_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_sort"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/tv_sort_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Recently Added"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/btn_toggle_view"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_button_circle_glass"
+                        android:src="@drawable/ic_grid_view"
+                        android:padding="10dp"
+                        app:tint="#FFFFFF" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_library_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="6dp"
+                android:clipToPadding="false"
+                android:paddingBottom="100dp"
+                android:layoutAnimation="@anim/layout_animation_pop_fade" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

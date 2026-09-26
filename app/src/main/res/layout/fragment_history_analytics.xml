@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Decorative Bouncing Circles (Lowest Layer) -->
+    <View
+        android:id="@+id/decorCircle1"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:alpha="0.12"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle2"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:alpha="0.10"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0.08"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle5"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:alpha="0.14"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.11"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:alpha="0.13"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle9"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0.08"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle10"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:alpha="0.12"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <View
+        android:id="@+id/decorCircle11"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.09"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:elevation="0dp" />
+
+    <!-- Foreground Content (Nested ConstraintLayout) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/history_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="History &amp; Analytics"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Analytics Cards Container -->
+        <LinearLayout
+            android:id="@+id/analytics_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/history_header">
+
+            <!-- Total Entries Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_total_sessions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#40FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_button_pill_glass">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Sessions"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.7" />
+
+                    <TextView
+                        android:id="@+id/total_entries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Most Common Mood Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_top_mood"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#40FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_button_pill_glass">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top Mood"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.7" />
+
+                    <TextView
+                        android:id="@+id/most_common_mood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="None"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- History List Header -->
+        <TextView
+            android:id="@+id/history_list_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Recent Songs &amp; Moods"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/analytics_container" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/history_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/history_list_header"
+            android:layoutAnimation="@anim/layout_animation_pop_fade" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

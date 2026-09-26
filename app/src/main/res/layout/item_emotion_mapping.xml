@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/admin_card_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with Emotion and Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvEmotion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="😊 Happy"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textStyle="bold"
+                android:textColor="@color/admin_success" />
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@color/admin_info" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="@color/admin_error" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uplifting moods"
+            android:textSize="14sp"
+            android:textColor="@color/md_theme_outline"
+            android:layout_marginTop="4dp" />
+
+        <!-- Genres Chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:chipSpacingHorizontal="4dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

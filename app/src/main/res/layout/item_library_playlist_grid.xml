@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    android:backgroundTint="@android:color/transparent"
+    app:rippleColor="#40FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_card"
+        android:padding="16dp">
+
+        <!-- Options Icon - Top Right, Outside and Above Thumbnail -->
+        <ImageButton
+            android:id="@+id/ib_playlist_options"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_more"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@android:color/white" />
+
+        <!-- Playlist Art Thumbnail -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_playlist_art"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:minHeight="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_music"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+
+        <!-- Playback Controls - Horizontally Centered Below Thumbnail -->
+        <LinearLayout
+            android:id="@+id/ll_playlist_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_playlist_art">
+
+            <ImageButton
+                android:id="@+id/ib_playlist_shuffle"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_shuffle"
+                app:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/ib_playlist_play"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_play_arrow"
+                app:tint="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/ib_playlist_delete"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:src="@android:drawable/ic_menu_delete"
+                app:tint="@android:color/white" />
+
+        </LinearLayout>
+
+        <!-- Playlist Name -->
+        <TextView
+            android:id="@+id/tv_playlist_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Playlist Name"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_playlist_controls" />
+
+        <!-- Playlist Details -->
+        <TextView
+            android:id="@+id/tv_playlist_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="Playlist"
+            android:textColor="#B3FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_playlist_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

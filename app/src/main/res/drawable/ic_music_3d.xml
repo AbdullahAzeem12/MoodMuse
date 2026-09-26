@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Shadow Layer for 3D Effect -->
+    <path
+        android:fillColor="#40000000"
+        android:pathData="M60,110 C40,110 25,95 25,75 L25,45 C25,25 40,10 60,10 C80,10 95,25 95,45 L95,75 C95,95 80,110 60,110 Z" />
+
+    <!-- Base Circle with Gradient (Crystal Effect) -->
+    <path
+        android:pathData="M60,105 C42,105 27,90 27,72 L27,48 C27,30 42,15 60,15 C78,15 93,30 93,48 L93,72 C93,90 78,105 60,105 Z">
+        <aapt:attr name="android:fillColor" xmlns:aapt="http://schemas.android.com/aapt">
+            <gradient
+                android:type="linear"
+                android:startX="30"
+                android:startY="20"
+                android:endX="90"
+                android:endY="100"
+                android:startColor="#FF6B9EF5"
+                android:centerColor="#FF9D6EF5"
+                android:endColor="#FFD66EF5" />
+        </aapt:attr>
+    </path>
+
+    <!-- Inner Glow Layer -->
+    <path
+        android:pathData="M60,95 C48,95 37,84 37,72 L37,48 C37,36 48,25 60,25 C72,25 83,36 83,48 L83,72 C83,84 72,95 60,95 Z">
+        <aapt:attr name="android:fillColor" xmlns:aapt="http://schemas.android.com/aapt">
+            <gradient
+                android:type="radial"
+                android:centerX="60"
+                android:centerY="50"
+                android:gradientRadius="50"
+                android:startColor="#80FFFFFF"
+                android:centerColor="#40FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Music Note 1 (Main) -->
+    <group
+        android:translateX="60"
+        android:translateY="60">
+        
+        <!-- Note Stem -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M2,-15 L6,-15 L6,15 L2,15 Z" />
+        
+        <!-- Note Head -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M-2,12 C-2,9 0,7 3,7 C6,7 8,9 8,12 C8,15 6,17 3,17 C0,17 -2,15 -2,12 Z" />
+        
+        <!-- Note Flag (Eighth Note) -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M6,-15 C6,-15 15,-12 15,-5 C15,-2 13,0 11,0 C9,0 6,-3 6,-8 Z" />
+    </group>
+
+    <!-- Music Note 2 (Secondary) -->
+    <group
+        android:translateX="45"
+        android:translateY="55"
+        android:scaleX="0.7"
+        android:scaleY="0.7">
+        
+        <path
+            android:fillColor="#E0FFFFFF"
+            android:pathData="M2,-12 L5,-12 L5,12 L2,12 Z" />
+        
+        <path
+            android:fillColor="#E0FFFFFF"
+            android:pathData="M-1,10 C-1,8 1,6 3,6 C5,6 7,8 7,10 C7,12 5,14 3,14 C1,14 -1,12 -1,10 Z" />
+    </group>
+
+    <!-- Shine/Gloss Effect (Top Left) -->
+    <path
+        android:pathData="M40,25 C35,25 32,28 32,33 C32,28 35,25 40,25 L55,25 C60,25 63,28 63,33 C63,28 60,25 55,25 Z">
+        <aapt:attr name="android:fillColor" xmlns:aapt="http://schemas.android.com/aapt">
+            <gradient
+                android:type="linear"
+                android:startX="40"
+                android:startY="20"
+                android:endX="55"
+                android:endY="35"
+                android:startColor="#80FFFFFF"
+                android:endColor="#00FFFFFF" />
+        </aapt:attr>
+    </path>
+
+    <!-- Crystal Sparkle 1 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,35 L37,37 L35,39 L33,37 Z" />
+
+    <!-- Crystal Sparkle 2 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,45 L76,46 L75,47 L74,46 Z" />
+
+    <!-- Crystal Sparkle 3 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,80 L52,82 L50,84 L48,82 Z" />
+
+    <!-- Outer Ring (3D Depth) -->
+    <path
+        android:strokeWidth="3"
+        android:strokeColor="#20FFFFFF"
+        android:fillColor="#00000000"
+        android:pathData="M60,100 C45,100 32,87 32,72 L32,48 C32,33 45,20 60,20 C75,20 88,33 88,48 L88,72 C88,87 75,100 60,100 Z" />
+
+</vector>
+

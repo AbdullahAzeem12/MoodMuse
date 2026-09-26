@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <dimen name="corner_sm">8dp</dimen>
+    <dimen name="corner_md">16dp</dimen>
+    <dimen name="corner_lg">24dp</dimen>
+</resources>
+

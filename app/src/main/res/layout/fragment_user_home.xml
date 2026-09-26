@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Greeting Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning"
+                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sarah"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:textColor="@android:color/white"
+                    android:alpha="0.8"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Mood Note Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardNoteBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#80FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/glass_card"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💭"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvNoteBanner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Your note will appear here..."
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold|italic"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:scrollHorizontally="true" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Current Mood Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCurrentMood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#40FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/glass_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Mood"
+                        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.8" />
+
+                    <TextView
+                        android:id="@+id/tvCurrentMood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="😊 Happy"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvTodayEntry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last updated: Today"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.7"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Mood Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Streak Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardStreak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#40FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:background="@drawable/glass_card">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔥"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/tvMoodStreak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7"
+                            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Day Streak"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:alpha="0.7"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Mood Score Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@android:color/transparent"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#40FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:background="@drawable/glass_card">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📊"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:id="@+id/tvMoodScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="85%"
+                            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mood Score"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:alpha="0.7"
+                            android:layout_marginTop="2dp" />
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progressMoodScore"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_marginTop="12dp"
+                            app:trackThickness="6dp"
+                            app:trackCornerRadius="3dp"
+                            app:indicatorColor="@android:color/white"
+                            app:trackColor="#40FFFFFF" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Quick Mood Selection Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuickActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#40FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/glass_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quick Mood Log"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_marginBottom="12dp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="false"
+                        app:chipSpacingHorizontal="8dp">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipQuickMood1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😊 Happy"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="#40FFFFFF"
+                            app:chipStrokeColor="#80FFFFFF" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipQuickMood2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😌 Calm"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="#40FFFFFF"
+                            app:chipStrokeColor="#80FFFFFF" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipQuickMood3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🎉 Energetic"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="#40FFFFFF"
+                            app:chipStrokeColor="#80FFFFFF" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipQuickMood4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😢 Sad"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="#40FFFFFF"
+                            app:chipStrokeColor="#80FFFFFF" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogMood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Log Detailed Mood"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="@color/accent"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Music Recommendations Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardRecommendations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#40FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/glass_card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="🎵 For Your Mood"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRefreshRecs"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Refresh"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/loadingRecommendations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="32dp"
+                        android:indeterminate="true"
+                        app:indicatorColor="@android:color/white" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRecommendations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingBottom="8dp"
+                        android:clipToPadding="false" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Insights Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardInsights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@android:color/transparent"
+                app:strokeWidth="1dp"
+                app:strokeColor="#40FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/glass_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💡 Weekly Insight"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvWeeklyInsight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your insights will appear here"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.8"
+                        android:lineSpacingExtra="4dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewHistory"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View Full History"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@android:color/white"
+                        app:strokeColor="#80FFFFFF" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Decorative Bouncing Circles -->
+    <View
+        android:id="@+id/decorCircle1"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:alpha="0.12"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle2"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:alpha="0.1"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0.08"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle5"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:alpha="0.14"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.11"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:alpha="0.13"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle9"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0.08"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle10"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:alpha="0.12"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+    <View
+        android:id="@+id/decorCircle11"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.09"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        android:elevation="10dp" />
+
+</FrameLayout>
+

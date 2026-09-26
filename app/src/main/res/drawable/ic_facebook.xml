@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#1877F2"
+        android:pathData="M24,4C12.95,4 4,12.95 4,24s8.95,20 20,20s20,-8.95 20,-20S35.05,4 24,4z"/>
+    
+    <!-- Facebook "f" logo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M29.5,16.5h-2.5c-1,0 -2,0.5 -2,2.5v2h4.5l-0.5,5h-4v12h-5v-12h-3v-5h3v-3c0,-3.5 2.5,-6 6,-6h3.5V16.5z"/>
+    
+    <!-- Inner gradient for depth -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.15"
+        android:pathData="M24,8c-8.84,0 -16,7.16 -16,16c0,0.56 0.03,1.11 0.08,1.66C8.84,17.48 15.73,11 24,11s15.16,6.48 15.92,14.66C39.97,25.11 40,24.56 40,24C40,15.16 32.84,8 24,8z"/>
+    
+    <!-- Top highlight for 3D effect -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.3"
+        android:pathData="M24,4C12.95,4 4,12.95 4,24c0,0.17 0,0.33 0.01,0.5C4.28,13.64 13.11,4.5 24,4.5S43.72,13.64 43.99,24.5C44,24.33 44,24.17 44,24C44,12.95 35.05,4 24,4z"/>
+    
+    <!-- Bottom shadow for 3D effect -->
+    <path
+        android:fillColor="#000000"
+        android:fillAlpha="0.2"
+        android:pathData="M24,43.5c10.77,0 19.5,-8.73 19.5,-19.5c0,-0.17 0,-0.33 -0.01,-0.5C43.33,34.04 34.77,42.5 24,42.5S4.67,34.04 4.51,23.5C4.5,23.67 4.5,23.83 4.5,24C4.5,34.77 13.23,43.5 24,43.5z"/>
+    
+    <!-- Side gradient for rounded 3D appearance -->
+    <path
+        android:fillColor="#0A66C2"
+        android:fillAlpha="0.3"
+        android:pathData="M39.14,8.86C35.31,5.03 30.01,2.5 24,2.5c-0.17,0 -0.33,0 -0.5,0.01C29.67,2.84 35.36,5.53 39.14,9.36c3.83,3.83 6.52,9.52 6.85,15.64c0,-0.17 0.01,-0.33 0.01,-0.5C46,18.49 43.47,13.19 39.14,8.86z"/>
+</vector>

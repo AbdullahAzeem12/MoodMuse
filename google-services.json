@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "858024188953",
+    "project_id": "moodmuse-9472d",
+    "storage_bucket": "moodmuse-9472d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858024188953:android:a8ce2f3d3ad719bd149e88",
+        "android_client_info": {
+          "package_name": "com.example.moodmuse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCF8nCiI8qt6AvCX_ynxkU1PP1rDO5GFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

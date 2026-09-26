@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background">
+
+    <!-- Fragment Container -->
+    <FrameLayout
+        android:id="@+id/user_nav_host"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@drawable/bg_navbar_gradient"
+        app:tabBackground="@android:color/transparent"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorColor="@android:color/white"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabRippleColor="#40FFFFFF"
+        app:tabIconTint="@android:color/white"
+        app:tabTextColor="@android:color/white"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:elevation="12dp" />
+
+</LinearLayout>

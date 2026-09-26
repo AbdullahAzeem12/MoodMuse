@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/glass_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/track_option_art"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/track_option_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/track_option_artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="#CCFFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_track_like"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Like"
+            app:icon="@drawable/ic_heart"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#20FFFFFF"
+            app:cornerRadius="16dp" />
+
+        <View
+            android:layout_width="12dp"
+            android:layout_height="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_track_share"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Share"
+            app:icon="@android:drawable/ic_menu_share"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#20FFFFFF"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_track_open"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Open Link"
+        app:icon="@drawable/ic_external_link"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/neon_blue"
+        app:cornerRadius="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_track_add_to_playlist"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Add to Playlist"
+        app:icon="@drawable/ic_add"
+        android:textColor="#E6FFFFFF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_track_cancel"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Cancel"
+        android:textColor="#99FFFFFF" />
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/glass_card">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="#40FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to Library"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_create_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/iv_playlist_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_playlist_add"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Playlist"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_create_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/iv_album_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_album_add"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Album"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_other_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/iv_other_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+        android:src="@drawable/ic_refresh_smooth"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:text="Refresh Library"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

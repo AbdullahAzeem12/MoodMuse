@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/admin_gradient_start">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emotion-Genre Mapping"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvMappingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 mappings"
+                android:textSize="14sp"
+                android:textColor="@color/semi_transparent_white"
+                android:layout_marginTop="4dp" />
+
+            <!-- Search Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        android:layout_marginStart="8dp"
+                        android:tint="@color/md_theme_outline" />
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Search emotions or genres..."
+                        android:background="@android:color/transparent"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMappings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:clipToPadding="false" />
+
+        <!-- Empty State -->
+        <LinearLayout
+            android:id="@+id/emptyStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@android:drawable/ic_menu_add"
+                android:tint="@color/md_theme_outline"
+                android:alpha="0.3" />
+
+            <TextView
+                android:id="@+id/tvEmptyState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No mappings found"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textColor="@color/md_theme_outline"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap the + button to add a new emotion-genre mapping"
+                android:textSize="14sp"
+                android:textColor="@color/md_theme_outline"
+                android:textAlignment="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddMapping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/admin_accent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

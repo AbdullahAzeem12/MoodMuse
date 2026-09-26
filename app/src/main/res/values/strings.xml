@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MoodMuse</string>
+    <string name="splash_tagline">Tune your mind, elevate your mood</string>
+    <string name="continue_label">Continue</string>
+    <string name="role_title">Choose your role</string>
+    <string name="role_user">I\'m a User</string>
+    <string name="role_admin">I\'m an Admin</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_moods">Moods</string>
+    <string name="nav_journal">Journal</string>
+    <string name="nav_profile">Profile</string>
+    <string name="admin_title">Admin Dashboard</string>
+    <string name="tab_overview">Overview</string>
+    <string name="tab_users">Users</string>
+    <string name="tab_content">Content</string>
+    <string name="tab_settings">Settings</string>
+    <string name="welcome_to">Welcome To</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_full_name">Full name</string>
+    <string name="cd_email">Email address</string>
+    <string name="cd_password">Password</string>
+    <string name="cd_confirm_password">Confirm password</string>
+    <string name="cd_password_strength_icon">Password strength icon</string>
+    <string name="like">Like</string>
+    <string name="liked">Liked</string>
+    <string name="add_to_playlist">Add to playlist</string>
+    <string name="play">Play</string>
+
+</resources>

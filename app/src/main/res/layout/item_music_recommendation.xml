@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@android:color/transparent"
+    app:strokeWidth="1dp"
+    app:strokeColor="#50FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_gradient_brand">
+
+        <!-- Animated Music Icon -->
+        <FrameLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="#40FFFFFF" />
+
+            <ImageView
+                android:id="@+id/iv_music_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_media_play"
+                android:padding="16dp"
+                android:tint="@android:color/white"
+                app:tint="@android:color/white" />
+        </FrameLayout>
+
+        <!-- Detailed Info Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunshine Vibes"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:maxLines="1"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:shadowColor="#40000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
+
+            <TextView
+                android:id="@+id/tvArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pharrell Williams"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="@android:color/white"
+                android:alpha="0.9"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="2dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POP"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_pill_glass"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp" />
+
+                <TextView
+                    android:id="@+id/tvSongCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24 songs"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/white"
+                    android:alpha="0.7"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Catchy Play Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlayPlaylist"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconSize="24dp"
+            app:iconTint="@color/brand_gradient_start"
+            android:backgroundTint="@android:color/white"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            android:elevation="6dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

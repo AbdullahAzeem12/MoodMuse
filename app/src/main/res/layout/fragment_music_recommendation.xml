@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Decorative Bouncing Circles (Lowest Layer) -->
+    <View android:id="@+id/decorCircle1" android:layout_width="85dp" android:layout_height="85dp" android:alpha="0.12" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" />
+    <View android:id="@+id/decorCircle2" android:layout_width="95dp" android:layout_height="95dp" android:alpha="0.15" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+    <View android:id="@+id/decorCircle3" android:layout_width="75dp" android:layout_height="75dp" android:alpha="0.10" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" />
+    <View android:id="@+id/decorCircle4" android:layout_width="110dp" android:layout_height="110dp" android:alpha="0.08" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+    <View android:id="@+id/decorCircle5" android:layout_width="65dp" android:layout_height="65dp" android:alpha="0.14" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" />
+    <View android:id="@+id/decorCircle6" android:layout_width="100dp" android:layout_height="100dp" android:alpha="0.11" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+    <View android:id="@+id/decorCircle7" android:layout_width="80dp" android:layout_height="80dp" android:alpha="0.13" android:background="@drawable/bg_circle" android:backgroundTint="@color/semi_transparent_white" />
+    <View android:id="@+id/decorCircle8" android:layout_width="80dp" android:layout_height="80dp" android:alpha="0.15" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+    <View android:id="@+id/decorCircle9" android:layout_width="110dp" android:layout_height="110dp" android:alpha="0.08" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+    <View android:id="@+id/decorCircle10" android:layout_width="65dp" android:layout_height="65dp" android:alpha="0.12" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+    <View android:id="@+id/decorCircle11" android:layout_width="100dp" android:layout_height="100dp" android:alpha="0.09" android:background="@drawable/bg_circle" android:backgroundTint="@color/text_primary_light" />
+
+    <!-- Foreground Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Music Recommendations"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/header_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mood-based Jamendo &amp; YouTube hybrid list"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="#B3FFFFFF"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/header_title" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/music_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="#80FFFFFF"
+            app:tabIndicatorHeight="3dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:layout_constraintTop_toBottomOf="@id/header_subtitle" />
+
+        <!-- ViewPager or ViewSwitcher/FrameLayout for the lists -->
+        <FrameLayout
+            android:id="@+id/list_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/music_tabs"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Jamendo List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/jamendo_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"
+                android:layoutAnimation="@anim/layout_animation_pop_fade"
+                android:visibility="visible" />
+
+            <!-- YouTube List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itunes_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"
+                android:layoutAnimation="@anim/layout_animation_pop_fade"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

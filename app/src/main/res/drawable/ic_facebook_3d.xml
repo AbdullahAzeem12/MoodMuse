@@ -1,0 +1,88 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Outer glow effect -->
+    <path
+        android:pathData="M24,3C11.85,3 3,11.85 3,24s8.85,21 21,21s21,-8.85 21,-21S36.15,3 24,3z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="24"
+                android:centerY="24"
+                android:gradientRadius="21"
+                android:type="radial">
+                <item android:offset="0.7" android:color="#FF1877F2"/>
+                <item android:offset="1" android:color="#001877F2"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Main circle with gradient -->
+    <path
+        android:pathData="M24,4C12.95,4 4,12.95 4,24s8.95,20 20,20s20,-8.95 20,-20S35.05,4 24,4z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="10"
+                android:startY="10"
+                android:endX="38"
+                android:endY="38"
+                android:type="linear">
+                <item android:offset="0" android:color="#FF5B9EF5"/>
+                <item android:offset="0.5" android:color="#FF1877F2"/>
+                <item android:offset="1" android:color="#FF0A66C2"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Facebook F logo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,16h-3c-1.65,0 -3,0.85 -3,2.5V21h5.5l-0.75,6H25v14h-6V27h-4v-6h4v-3.5c0,-4.14 2.86,-7.5 7,-7.5h5V16z"/>
+    
+    <!-- Inner shadow for depth -->
+    <path
+        android:fillColor="#000000"
+        android:fillAlpha="0.1"
+        android:pathData="M25,21v-2.5c0,-1.65 1.35,-2.5 3,-2.5h3v-6h-5c-4.14,0 -7,3.36 -7,7.5V21h-4v1h4v-1h6z"/>
+    
+    <!-- Top highlight for 3D sphere effect -->
+    <path
+        android:pathData="M24,4C12.95,4 4,12.95 4,24c0,0.5 0.02,1 0.05,1.5C4.55,14.73 13.23,6 24,6s19.45,8.73 19.95,19.5C43.98,25 44,24.5 44,24C44,12.95 35.05,4 24,4z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="24"
+                android:startY="4"
+                android:endX="24"
+                android:endY="24"
+                android:type="linear">
+                <item android:offset="0" android:color="#66FFFFFF"/>
+                <item android:offset="1" android:color="#00FFFFFF"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Bottom shadow for 3D sphere effect -->
+    <path
+        android:pathData="M24,44c11.05,0 20,-8.95 20,-20c0,-0.5 -0.02,-1 -0.05,-1.5C43.45,33.27 34.77,42 24,42S4.55,33.27 4.05,22.5C4.02,23 4,23.5 4,24C4,35.05 12.95,44 24,44z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="24"
+                android:startY="24"
+                android:endX="24"
+                android:endY="44"
+                android:type="linear">
+                <item android:offset="0" android:color="#00000000"/>
+                <item android:offset="1" android:color="#33000000"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Glossy overlay -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.1"
+        android:pathData="M24,8c-8.84,0 -16,7.16 -16,16c0,0.28 0.01,0.56 0.03,0.83C8.42,16.48 15.73,10 24,10s15.58,6.48 15.97,14.83C39.99,24.56 40,24.28 40,24C40,15.16 32.84,8 24,8z"/>
+</vector>

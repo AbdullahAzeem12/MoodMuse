@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_brand">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="@color/auth_surface"
+        android:padding="4dp"
+        android:layout_margin="6dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="Back" />
+
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Admin Registration"
+        android:textSize="36sp"
+        android:textColor="@color/neon_purple"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:shadowColor="@color/text_primary_light"
+        android:shadowDx="0"
+        android:shadowDy="6"
+        android:shadowRadius="16"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/registerSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Create a secure administrator account"
+        android:textSize="16sp"
+        android:textColor="@color/semi_transparent_white"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toBottomOf="@id/registerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/registerScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/registerSubtitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/registerCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="15dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:strokeColor="@color/material_purple"
+                app:strokeWidth="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Account Information"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/auth_surface"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginBottom="17dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/adminIdLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Admin ID"
+                        app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                        app:startIconTint="@color/admin_accent"
+                        app:helperText="This will be your unique identifier"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/adminIdInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fullNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Full Name"
+                        android:layout_marginTop="16dp"
+                        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                        app:startIconTint="@color/admin_accent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fullNameInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/emailLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:layout_marginTop="16dp"
+                        app:startIconDrawable="@android:drawable/ic_dialog_email"
+                        app:startIconTint="@color/admin_accent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/emailInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phoneLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:layout_marginTop="16dp"
+                        app:startIconDrawable="@android:drawable/ic_menu_call"
+                        app:startIconTint="@color/admin_accent"
+                        app:helperText="Required for two-factor authentication"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phoneInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Security"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/auth_surface"
+                        android:fontFamily="@font/poppins"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/passwordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                        app:startIconTint="@color/admin_accent"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/admin_accent"
+                        app:helperText="Must be at least 12 characters with numbers, symbols, and uppercase letters"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/passwordInput"
+                            android:layout_width="match_parent"
+                            android:textColor="@color/auth_surface"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/confirmPasswordLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Confirm Password"
+                        android:layout_marginTop="16dp"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                        app:startIconTint="@color/admin_accent"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/admin_accent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/confirmPasswordInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+
+                        <ImageView
+                            android:id="@+id/securityLevelIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_partial_secure"
+                            android:tint="@color/admin_info" />
+
+                        <TextView
+                            android:id="@+id/securityLevelText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Password Strength: Strong"
+                            android:textSize="14sp"
+                            android:textColor="@color/admin_info"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/termsCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I agree to the Terms of Service and Privacy Policy"
+                        android:layout_marginTop="16dp"
+                        android:buttonTint="@color/admin_accent" />
+
+                    <CheckBox
+                        android:id="@+id/securityPolicyCheckbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I understand and will comply with the security policy"
+                        android:buttonTint="@color/admin_accent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/registerButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Register"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        app:cornerRadius="16dp"
+                        android:layout_marginTop="24dp"
+                        android:backgroundTint="@color/material_blue"
+                        android:textColor="@android:color/white"
+                        app:icon="@android:drawable/ic_secure"
+                        app:iconGravity="end"
+                        app:iconTint="@color/admin_accent" />
+
+                    <TextView
+                        android:id="@+id/securityNotice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your registration request will be reviewed by a system administrator. You will receive an email once your account is approved."
+                        android:textSize="12sp"
+                        android:textColor="@color/admin_warning"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account? "
+                    android:textColor="@color/semi_transparent_white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/signInLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:textColor="@color/neon_blue"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Decorative Elements - Same as AdminSignInActivity -->
+    <View
+        android:id="@+id/decorCircle1"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:alpha="0.12"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle2"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:alpha="0.1"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"/>
+
+    <View
+        android:id="@+id/decorCircle4"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0.08"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"/>
+
+    <View
+        android:id="@+id/decorCircle5"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:alpha="0.14"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints"/>
+
+    <View
+        android:id="@+id/decorCircle6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.11"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:alpha="0.13"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/semi_transparent_white"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:alpha="0.15"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle9"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:alpha="0.08"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle10"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:alpha="0.12"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/decorCircle11"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:alpha="0.09"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/text_primary_light"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

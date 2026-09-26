@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_history_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    android:backgroundTint="@android:color/transparent"
+    app:strokeWidth="1.5dp"
+    app:strokeColor="#30FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/glass_card"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <!-- Emotion Badge with Catchy Glow -->
+        <FrameLayout
+            android:id="@+id/emotion_badge_container"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:id="@+id/history_emotion_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_circle"
+                android:backgroundTint="@color/brand_gradient_start"
+                android:alpha="0.25" />
+
+            <TextView
+                android:id="@+id/history_emotion_emoji"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="😊"
+                android:textSize="32sp" />
+        </FrameLayout>
+
+        <!-- Dynamic Content Details -->
+        <LinearLayout
+            android:id="@+id/details_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintStart_toEndOf="@id/emotion_badge_container"
+            app:layout_constraintEnd_toStartOf="@id/btn_replay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/history_emotion_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Feeling Happy"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:letterSpacing="-0.01" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@android:drawable/ic_media_play"
+                    app:tint="#B3FFFFFF" />
+
+                <TextView
+                    android:id="@+id/history_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="Listening to: Chill Hits"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:textColor="#B3FFFFFF"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/history_timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Just now"
+                android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                android:textColor="@android:color/white"
+                android:alpha="0.5"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:id="@+id/history_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3:45"
+                android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                android:textColor="@android:color/white"
+                android:alpha="0.5"
+                android:layout_marginTop="2dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Catchy Glassy Replay Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_replay"
+            style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconTint="@android:color/white"
+            android:backgroundTint="#20FFFFFF"
+            app:rippleColor="#40FFFFFF"
+            app:strokeColor="#30FFFFFF"
+            app:strokeWidth="1dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

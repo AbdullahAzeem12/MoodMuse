@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/md_theme_surface">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New User"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:textStyle="bold"
+        android:textColor="@color/admin_gradient_start"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+        app:endIconMode="clear_text"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Email Address"
+        app:startIconDrawable="@android:drawable/ic_dialog_email"
+        app:endIconMode="clear_text"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Role Selector -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Role"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:textColor="@color/md_theme_outline"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/md_theme_outline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_preferences"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:tint="@color/admin_info" />
+
+            <Spinner
+                android:id="@+id/spinnerRole"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="12dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Status Selector -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Status"
+        android:textAppearance="@style/TextAppearance.Material3.LabelLarge"
+        android:textColor="@color/md_theme_outline"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/md_theme_outline">
+
+        <RadioGroup
+            android:id="@+id/rgStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <RadioButton
+                android:id="@+id/rbActive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Active"
+                android:textColor="@color/admin_success"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbInactive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Inactive"
+                android:textColor="@color/admin_error" />
+        </RadioGroup>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="24dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/md_theme_outline"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:backgroundTint="@color/admin_accent" />
+    </LinearLayout>
+
+</LinearLayout>
+

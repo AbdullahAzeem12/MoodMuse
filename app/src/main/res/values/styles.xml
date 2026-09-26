@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MoodMuse.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/corner_md</item>
+    </style>
+
+    <style name="MoodMuse.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:insetTop">10dp</item>
+        <item name="android:insetBottom">12dp</item>
+    </style>
+
+    <style name="MoodMuse.Chip" parent="Widget.Material3.Chip.Assist">
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="CircleShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
+

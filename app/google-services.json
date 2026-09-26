@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "858024188953",
+    "project_id": "moodmuse-9472d",
+    "storage_bucket": "moodmuse-9472d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858024188953:android:a8ce2f3d3ad719bd149e88",
+        "android_client_info": {
+          "package_name": "com.example.moodmuse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858024188953-d39i39ninir8ct46g8nctfivs9k5ff7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moodmuse",
+            "certificate_hash": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b"
+          }
+        },
+        {
+          "client_id": "858024188953-amudbg8m7e40n2a39gpi455a8l6pt920.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCF8nCiI8qt6AvCX_ynxkU1PP1rDO5GFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858024188953-amudbg8m7e40n2a39gpi455a8l6pt920.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

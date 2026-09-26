@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/glass_card">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Library Options"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp"
+        android:gravity="center" />
+
+    <!-- Create Playlist Option -->
+    <LinearLayout
+        android:id="@+id/btn_create_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_playlist_add"
+            android:contentDescription="Create Playlist"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Create New Playlist"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Arrow"
+            app:tint="#80FFFFFF" />
+    </LinearLayout>
+
+    <!-- Create Album Option -->
+    <LinearLayout
+        android:id="@+id/btn_create_album"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_album_add"
+            android:contentDescription="Create Album"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Create New Album"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Arrow"
+            app:tint="#80FFFFFF" />
+    </LinearLayout>
+
+    <!-- Import Songs Option -->
+    <LinearLayout
+        android:id="@+id/btn_import_songs"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_import"
+            android:contentDescription="Import Songs"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Import Songs"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Arrow"
+            app:tint="#80FFFFFF" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#40FFFFFF"
+        android:layout_marginVertical="16dp" />
+
+    <!-- Additional Options -->
+    <LinearLayout
+        android:id="@+id/btn_settings"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="Library Settings"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Arrow"
+            app:tint="#80FFFFFF" />
+    </LinearLayout>
+
+    <!-- Cancel Button -->
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Cancel"
+        android:textSize="16sp"
+        android:textColor="#80FFFFFF"
+        android:gravity="center"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

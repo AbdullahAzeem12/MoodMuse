@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_brand"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Animated 3D Music Icon with Gradient Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoCard"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/bg_gradient_music_card"
+            app:cardCornerRadius="70dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Gradient Background Layer -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_gradient_music_card" />
+
+            <!-- Rotating 3D Music Icon -->
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="3D Music Icon"
+                android:padding="20dp"
+                android:src="@drawable/ic_music_3d" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Title with Enhanced Shadow Effect -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:shadowColor="@color/text_primary_light"
+            android:shadowDx="0"
+            android:shadowDy="6"
+            android:shadowRadius="16"
+            android:text="MoodMuse"
+            android:textColor="@color/neon_purple"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoCard" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:text="Choose your role to continue"
+            android:textColor="@color/semi_transparent_white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <!-- User Card with Enhanced Design -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/userCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            app:cardBackgroundColor="@color/auth_surface"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle"
+            app:strokeColor="@color/semi_transparent_black"
+            app:strokeWidth="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- Icon Background Circle -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/neon_purple"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:id="@+id/userIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@android:color/white"
+                        android:contentDescription="User Icon"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_profile" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/userTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="User Access"
+                    android:textColor="@color/user_gradient_start"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/userDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Track your moods, discover music, and journal your emotional journey"
+                    android:textColor="@color/auth_text_secondary"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContinueUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/material_blue"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Continue as User"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="16dp"
+                    app:icon="@android:drawable/ic_media_play"
+                    app:iconGravity="end"
+                    app:iconTint="@color/neon_pink" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Admin Card with Enhanced Design -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/adminCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:cardBackgroundColor="@color/auth_surface"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userCard"
+            app:strokeColor="@color/semi_transparent_black"
+            app:strokeWidth="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- Icon Background Circle -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardBackgroundColor="@color/admin_gradient_start"
+                    app:cardCornerRadius="40dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:id="@+id/adminIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Admin Icon"
+                        android:padding="16dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:background="@color/neon_purple" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/adminTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Admin Access"
+                    android:textColor="@color/admin_gradient_start"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/adminDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Manage users, configure emotions, view analytics and system insights"
+                    android:textColor="@color/auth_text_secondary"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContinueAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Continue as Admin"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/material_blue"
+                    app:cornerRadius="16dp"
+                    app:icon="@android:drawable/ic_menu_manage"
+                    app:iconGravity="end"
+                    app:iconTint="@color/neon_pink" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Version Text -->
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/montserrat"
+            android:text="MoodMuse v1.0"
+            android:textColor="@color/semi_transparent_white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/adminCard" />
+
+
+
+
+        <!-- Additional Decorative Elements - Now with Random Movement -->
+
+        <View
+            android:id="@+id/decorCircle8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:alpha="0.15"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/decorCircle9"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:alpha="0.08"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/decorCircle10"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:alpha="0.12"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/decorCircle11"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:alpha="0.09"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <!-- 7 Decorative Elements with Full-Length Bouncing Animations -->
+
+        <!-- Circle 1: Top-Left -->
+
+        <!-- Circle 2: Top-Right -->
+        <View
+            android:id="@+id/decorCircle1"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:alpha="0.12"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/semi_transparent_white"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Circle 3: Center-Left -->
+
+        <!-- Circle 4: Center-Right -->
+
+        <View
+            android:id="@+id/decorCircle2"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:alpha="0.15"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/decorCircle3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:alpha="0.1"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/semi_transparent_white"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"/>
+
+        <View
+            android:id="@+id/decorCircle4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:alpha="0.08"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"/>
+
+        <!-- Circle 5: Bottom-Left -->
+        <View
+            android:id="@+id/decorCircle5"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:alpha="0.14"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/semi_transparent_white"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"/>
+
+        <!-- Circle 6: Bottom-Right -->
+        <View
+            android:id="@+id/decorCircle6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:alpha="0.11"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/text_primary_light"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Circle 7: Center-Bottom -->
+        <View
+            android:id="@+id/decorCircle7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:alpha="0.13"
+            android:background="@drawable/bg_circle"
+            android:backgroundTint="@color/semi_transparent_white"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

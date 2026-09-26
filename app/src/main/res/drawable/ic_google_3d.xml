@@ -1,0 +1,63 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Outer ring with gradient -->
+    <path
+        android:pathData="M24,2C11.85,2 2,11.85 2,24s9.85,22 22,22s22,-9.85 22,-22S36.15,2 24,2z M24,42c-9.94,0 -18,-8.06 -18,-18S14.06,6 24,6s18,8.06 18,18S33.94,42 24,42z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="12"
+                android:startY="12"
+                android:endX="36"
+                android:endY="36"
+                android:type="linear">
+                <item android:offset="0" android:color="#FF4285F4"/>
+                <item android:offset="0.33" android:color="#FF34A853"/>
+                <item android:offset="0.66" android:color="#FFFBBC05"/>
+                <item android:offset="1" android:color="#FFEA4335"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- White background circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,6C14.06,6 6,14.06 6,24s8.06,18 18,18s18,-8.06 18,-18S33.94,6 24,6z"/>
+    
+    <!-- Google G with segments -->
+    <!-- Blue segment -->
+    <path
+        android:fillColor="#4285F4"
+        android:pathData="M37.5,24.5c0,-0.75 -0.07,-1.48 -0.19,-2.18H24v4.12h7.61c-0.33,1.77 -1.33,3.27 -2.83,4.27v3.55h4.58C36.07,31.9 37.5,28.52 37.5,24.5z"/>
+    
+    <!-- Green segment -->
+    <path
+        android:fillColor="#34A853"
+        android:pathData="M24,38c3.86,0 7.1,-1.28 9.46,-3.46l-4.58,-3.55c-1.28,0.86 -2.92,1.36 -4.88,1.36c-3.75,0 -6.93,-2.53 -8.06,-5.93H11.18v3.67C13.61,34.64 18.46,38 24,38z"/>
+    
+    <!-- Yellow segment -->
+    <path
+        android:fillColor="#FBBC05"
+        android:pathData="M15.94,26.42c-0.29,-0.86 -0.45,-1.77 -0.45,-2.69s0.16,-1.83 0.45,-2.69v-3.67h-4.76C10.32,19.23 9.75,21.55 9.75,24s0.57,4.77 1.43,6.63L15.94,26.42z"/>
+    
+    <!-- Red segment -->
+    <path
+        android:fillColor="#EA4335"
+        android:pathData="M24,15.38c2.11,0 4.01,0.73 5.5,2.15l4.12,-4.12C31.1,11.08 27.86,9.75 24,9.75c-5.54,0 -10.39,3.36 -12.82,7.91l4.76,3.67C17.07,17.91 20.25,15.38 24,15.38z"/>
+    
+    <!-- Glossy overlay for 3D effect -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.2"
+        android:pathData="M24,6C14.06,6 6,14.06 6,24c0,0.34 0.01,0.67 0.03,1C6.35,15.33 14.39,7.5 24,7.5S41.65,15.33 41.97,25C41.99,24.67 42,24.34 42,24C42,14.06 33.94,6 24,6z"/>
+    
+    <!-- Bottom shadow -->
+    <path
+        android:fillColor="#000000"
+        android:fillAlpha="0.15"
+        android:pathData="M24,41.5c9.67,0 17.5,-7.83 17.5,-17.5c0,-0.34 -0.01,-0.67 -0.03,-1C41.15,32.67 33.11,40.5 24,40.5S6.85,32.67 6.53,23C6.51,23.33 6.5,23.66 6.5,24C6.5,33.67 14.33,41.5 24,41.5z"/>
+</vector>

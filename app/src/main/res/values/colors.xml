@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Theme Colors -->
+    <color name="md_theme_primary">#6750A4</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#EADDFF</color>
+    <color name="md_theme_onPrimaryContainer">#21005D</color>
+
+    <color name="md_theme_secondary">#625B71</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#E8DEF8</color>
+    <color name="md_theme_onSecondaryContainer">#1D192B</color>
+
+    <color name="md_theme_tertiary">#7D5260</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_tertiaryContainer">#FFD8E4</color>
+    <color name="md_theme_onTertiaryContainer">#31111D</color>
+
+    <color name="md_theme_error">#B3261E</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_errorContainer">#F9DEDC</color>
+    <color name="md_theme_onErrorContainer">#410E0B</color>
+
+    <color name="md_theme_background">#FFFBFE</color>
+    <color name="md_theme_onBackground">#1C1B1E</color>
+    <color name="md_theme_surface">#FFFBFE</color>
+    <color name="md_theme_onSurface">#1C1B1E</color>
+    <color name="md_theme_outline">#79747E</color>
+
+    <!-- Brand Gradients -->
+    <color name="brand_gradient_start">#5B86E5</color>
+    <color name="brand_gradient_end">#36D1DC</color>
+
+    <!-- User Authentication Colors -->
+    <color name="user_gradient_start">#3A7BD5</color>
+    <color name="user_gradient_end">#00D2FF</color>
+    <color name="user_accent">#FF7EB3</color>
+    <color name="user_success">#6EFFCF</color>
+    <color name="user_progress">#FFD166</color>
+
+    <!-- Admin Dashboard Colors -->
+    <color name="admin_gradient_start">#667eea</color>
+    <color name="admin_gradient_end">#764ba2</color>
+    <color name="admin_accent">#f093fb</color>
+    <color name="admin_success">#4ade80</color>
+    <color name="admin_warning">#fbbf24</color>
+    <color name="admin_error">#ef4444</color>
+    <color name="admin_info">#3b82f6</color>
+    <color name="admin_card_bg">#FFFFFF</color>
+    <color name="admin_card_bg_dark">#1e293b</color>
+
+    <!-- Common Authentication Colors -->
+    <color name="auth_success">#10b981</color>
+    <color name="auth_error">#ef4444</color>
+    <color name="auth_shadow">#33000000</color>
+    <color name="auth_surface">#FFFFFF</color>
+    <color name="auth_text_primary">#333333</color>
+    <color name="auth_text_secondary">#757575</color>
+    <color name="auth_divider">#EEEEEE</color>
+
+    <!-- Background Gradients -->
+    <color name="bg_gradient_user_start">#3A7BD5</color>
+    <color name="bg_gradient_user_end">#00D2FF</color>
+    <color name="bg_gradient_admin_start">#2C3E50</color>
+    <color name="bg_gradient_admin_end">#4CA1AF</color>
+    <color name="bg_gradient_brand_start">#5B86E5</color>
+    <color name="bg_gradient_brand_end">#36D1DC</color>
+
+    <!-- Neon Colors for Effects -->
+    <color name="neon_blue">#00d4ff</color>
+    <color name="neon_pink">#ff006e</color>
+    <color name="neon_green">#00FF00</color>
+    <color name="neon_yellow">#FFFF00</color>
+    <color name="neon_orange">#FF5F1F</color>
+    <color name="neon_purple">#9D00FF</color>
+
+    <!-- Material Design Colors -->
+    <color name="material_red">#F44336</color>
+    <color name="material_pink">#E91E63</color>
+    <color name="material_purple">#9C27B0</color>
+    <color name="material_deep_purple">#673AB7</color>
+    <color name="material_indigo">#3F51B5</color>
+    <color name="material_blue">#2196F3</color>
+    <color name="material_light_blue">#03A9F4</color>
+    <color name="material_cyan">#00BCD4</color>
+    <color name="material_teal">#009688</color>
+    <color name="material_green">#4CAF50</color>
+    <color name="material_light_green">#8BC34A</color>
+    <color name="material_lime">#CDDC39</color>
+    <color name="material_yellow">#FFEB3B</color>
+    <color name="material_amber">#FFC107</color>
+    <color name="material_orange">#FF9800</color>
+    <color name="material_deep_orange">#FF5722</color>
+    <color name="material_brown">#795548</color>
+    <color name="material_grey">#9ca3af</color>
+    <color name="material_blue_grey">#607D8B</color>
+
+    <!-- Status Colors -->
+    <color name="status_success">#4CAF50</color>
+    <color name="status_warning">#FFC107</color>
+    <color name="status_error">#F44336</color>
+    <color name="status_info">#2196F3</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary_dark">#212121</color>
+    <color name="text_secondary_dark">#757575</color>
+    <color name="text_primary_light">#FFFFFF</color>
+    <color name="text_secondary_light">#BDBDBD</color>
+
+    <!-- Background Colors -->
+    <color name="bg_light">#FAFAFA</color>
+    <color name="bg_dark">#212121</color>
+
+    <!-- Transparent Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#B3FFFFFF</color>
+
+    <!-- Emotion Colors -->
+    <color name="emotion_happy">#4CAF50</color>
+    <color name="emotion_sad">#2196F3</color>
+    <color name="emotion_angry">#F44336</color>
+    <color name="emotion_surprised">#FFC107</color>
+    <color name="emotion_excited">#FF5722</color>
+    <color name="emotion_calm">#009688</color>
+    <color name="emotion_neutral">#9E9E9E</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="indigo">#4B0082</color>
+    <color name="violet">#8B00FF</color>
+
+    <!-- Standard App Colors -->
+    <color name="primary">#6200EE</color>
+    <color name="primaryDark">#3700B3</color>
+    <color name="accent">#03DAC6</color>
+    <color name="glass_card">#80FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="purple_500">#6200EE</color>
+
+</resources>
